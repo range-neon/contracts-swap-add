@@ -574,7 +574,7 @@ contract RangeProtocolVault is
 
     function getUnderlyingBalancesByShare(
         uint256 shares
-    ) external view returns (uint256 amount0, uint256 amount1) {
+    ) external view override returns (uint256 amount0, uint256 amount1) {
         uint256 _totalSupply = totalSupply();
         if (_totalSupply != 0) {
             // getUnderlyingBalances already applies performanceFee
